@@ -1,0 +1,13 @@
+\begin{align*}
+    s &= \frac{4\rho}{3T} = \frac{4g}{3T}\int\frac{\dd ^3 p}{(2\pi)^3} \frac{E}{e^{E/T} \pm 1}\\
+    &=\frac{4g}{3T}\int_0^\infty\frac{p^2\dd p}{2\pi^2}\frac{p}{e^{p/T} \pm 1}\\
+    &=\frac{4gT^3}{3}\frac{1}{2\pi^2}\int_0^\infty\dd x \frac{x^3}{e^x \pm 1}\\
+\intertext{费米子:}
+    &=\frac{2gT^3}{3\pi^2}(1 - 2^{-3})\Gamma(4)\zeta(4) = \frac{7}{8}\frac{2\pi^2gT^3}{45}\\
+\intertext{玻色子:}
+    &=\frac{2gT^3}{3\pi^2}\Gamma(4)\zeta(4) = \frac{2\pi^2gT^3}{45}\\
+    s &= \frac{2\pi^2}{45}\qty[\sum_{i=\rm{bosons}}g_iT_i^3 + \frac{7}{8}\sum_{i=\rm{fermions}}g_iT_i^3]
+\intertext{如果$m\neq0$}
+    \rho &= \frac{4g}{3T}\int_0^\infty\frac{p^2\dd p}{2\pi^2}\frac{\sqrt{p^2+m^2}}{e^{\sqrt{p^2+m^2}/T} \pm 1} \\
+    &\sim e^{-m}\frac{4g}{3T}\int_0^\infty\frac{p^2\dd p}{2\pi^2}\frac{\sqrt{p^2+m^2}}{e^{p/T} \pm 1}\\
+\end{align*}

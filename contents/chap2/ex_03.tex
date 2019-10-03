@@ -1,0 +1,23 @@
+$g_{\mu\nu}$的形式为:
+$$g_{\mu\nu} = \mqty(\dmat[0]{-1 - 2 \phi,1 - 2\phi,1- 2\phi,1- 2\phi})$$
+\paragraph{(a)}
+利用公式\ref{chris}得
+\begin{align*}
+    \Gamma^0_{00} &= \frac{g^{0\nu}}{2}\qty[\pdv{g_{0\nu}}{x^0}+\pdv{g_{0\nu}}{x^0}-\pdv{g_{00}}{x^\nu}]\\
+        &=\frac{g^{00}}{2}\qty[\pdv{g_{00}}{x^0}] = \frac{1}{1 + 2\phi} \pdv{\phi}{t}\\
+        &\sim\pdv{\phi}{t}
+\end{align*}
+\begin{align*}
+    \Gamma^i_{00} &= \frac{g^{i\nu}}{2}\qty[\pdv{g_{0\nu}}{x^0}+\pdv{g_{0\nu}}{x^0}-\pdv{g_{00}}{x^\nu}]\\
+    & = \frac{\delta^{ij} g^{11}}{2}\qty[\pdv{g_{0j}}{x^0}+\pdv{g_{0j}}{x^0}-\pdv{g_{00}}{x^j}] \\
+    & = -\frac{\delta^{ij} g^{11}}{2}\pdv{g_{00}}{x^j} = \frac{1}{1-2\phi} \delta^{ij}\pdv{\phi}{x^j}\\
+    & \sim \delta^{ij} \pdv{\phi}{x^j}
+\end{align*}
+
+
+\paragraph{(b)}
+利用测地线方程\ref{4dgeodesic}, 在时间分量上有:
+\begin{align*}
+    \dv[2]{x^0}{\lambda} + \Gamma^0_{\alpha\beta}\dv{x^\alpha}{\lambda}\dv{x^\beta}{\lambda} = 0
+\end{align*}
+计算$\Gamma$

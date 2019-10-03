@@ -1,0 +1,26 @@
+由爱因斯坦场方程\ref{einsteineq} 及理想各向同性流体假设, 有:
+\begin{align*}
+    R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}\mathcal{R} = 8\pi G g_{\mu\tau}T^{\tau}_{\ \nu}\\
+    T^\tau_{\ \nu} = \mqty(\dmat[0]{-\rho, \mathcal{P}, \mathcal{P}, \mathcal{P}})
+\end{align*}
+Ricci 标量
+\begin{align*}
+    \mathcal{R} &= R_{\mu\nu}g^{\mu\nu}\\
+    &=-R_{00} + \frac{1}{a^2}R_{ii}\\
+    &=3\frac{\ddot{a}}{a} + \frac{3}{a^2}\qty(2\dot{a}^2 + a\ddot{a})\\
+    &=6\qty[\frac{\ddot{a}}{a} + \qty(\frac{\dot{a}}{a})^2]
+\end{align*}
+空间分量:
+\begin{align*}
+    R_{ij} - \frac{1}{2}g_{ij}\mathcal{R} &= 8\pi G g_{i\tau}T^{\tau}_{\ j}\\
+    &= 8\pi G a^2\delta_{ik}\delta_{kj}\mathcal{P}\\
+    &= 8\pi G a^2\mathcal{P}\delta_{ij}
+\end{align*}
+当$i=j=1,2,3$时给出同一个方程:
+\begin{align*}
+    R_{11} - \frac{1}{2}g_{11}\mathcal{R} &= 8\pi G a^2 \mathcal{P}\\
+    2\dot{a}^2 + a\ddot{a} - 3a^2 \qty[\frac{\ddot{a}}{a} + \qty(\frac{\dot{a}}{a})^2] &= 8\pi G a^2 \mathcal{P}\\
+    2\dot{a}^2 + a\ddot{a} - 3a\ddot{a} - 3\dot{a}^2 &= 8\pi G a^2 \mathcal{P}\\
+    \dot{a}^2 + 2a\ddot{a} &= -8\pi G a^2 \mathcal{P}\\
+    \frac{\ddot{a}}{a} + \frac12\qty(\frac{\dot{a}}{a})^2 &= -4\pi G \mathcal{P}
+\end{align*}

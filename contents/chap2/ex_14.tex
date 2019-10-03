@@ -1,0 +1,27 @@
+\paragraph{(a)}
+已知$\rho$
+\begin{align*}
+    \rho_i &= g_i\int\frac{\dd^3 p}{\qty(2\pi)^3}f_i\qty(\va*{x},\va*{p})E(p)
+\intertext{求$\mathcal{P}=?$}
+    \mathcal{P}_i &= -g_i\int\frac{\dd^3 p}{\qty(2\pi)^3}f_i\qty(\va*{x},\va*{p})V\pdv{E(p)}{V}\\
+    E(p) &= \sqrt{p^2+m^2} \quad p = 2\pi n V^{-\frac{1}{3}}\\
+    \pdv{E(p)}{V} &= \frac{p}{E}\pdv{p}{V} = -\frac{p}{3E}pV^{-1}\\
+    \mathcal{P}_i &= g_i\int\frac{\dd^3 p}{\qty(2\pi)^3}f_i\qty(\va*{x},\va*{p})\frac{p^2}{3E(p)}\\
+\end{align*}
+相对论粒子:$E(p)=p$
+\begin{align*}
+    \mathcal{P}_i &= g_i\int\frac{\dd^3 p}{\qty(2\pi)^3}f_i\qty(\va*{x},\va*{p})\frac{p^2}{3p} = \frac{1}{3}\rho_i\\
+\end{align*}
+\paragraph{(b)}
+\begin{align*}
+    \rho &= g\int\frac{\dd^3 p}{\qty(2\pi)^3}f\qty(\va*{x},\va*{p})E(p) = g\int\frac{p^2\dd p}{2\pi^2}f\qty(\va*{x},\va*{p})E(p)\\
+    \mathcal{P} &= g\int\frac{\dd^3 p}{\qty(2\pi)^3}f\qty(\va*{x},\va*{p})\frac{p^2}{3E(p)} = g\int\frac{p^2\dd p}{2\pi^2}f\qty(\va*{x},\va*{p})\frac{p^2}{3E(p)}\\
+    \dv{\mathcal{P}}{T} &= g\int\frac{p^2\dd p}{2\pi^2}\dv{f\qty(E/T)}{T}\frac{p^2}{3E(p)}\\
+    \dv{f(E/T)}{T} &= -f'(E/T)\frac{E}{T^2} = -f'(E/T)\frac{E}{T}\dv{E/T}{E} = -\frac{E}{T}\dv{f(E/T)}{E} \\ 
+    \dv{\mathcal{P}}{T} &= -g\int\frac{p^2\dd p}{2\pi^2}\dv{f\qty(E/T)}{E}\frac{p^2}{3T}\\
+    &= -g\int\frac{p^2}{2\pi^2}\frac{E}{p}\frac{p^2}{3T}\dd f\qty(E/T) \quad (\dv{E}{p} = \frac{p}{E})\\
+    &= g\int\frac{1}{2\pi^2}\frac{1}{3T}f(E/T)\dd Ep^3\\
+    &= g\int\frac{1}{2\pi^2}\frac{1}{3T}f(E/T)(3p^2E\dd p + \frac{p^4}{E}\dd p)\\
+    &=\frac{1}{T}\qty[g\int\frac{p^2\dd p}{2\pi^2}f(E/T)E + g\int \frac{p^2\dd p}{2\pi^2}f(E/T)\frac{p^2}{3E}]\\
+    & = \frac{\rho + \mathcal{P}}{T}
+\end{align*}

@@ -1,0 +1,28 @@
+\paragraph{(a)}
+$x^i = \{r, \theta\}, g_{ij} = \mqty(1 & 0 \\ 0 & r^2), g^{ij} = \mqty(1 & 0 \\ 0 & 1/r^2)$, 利用公式\ref{chris}, 先计算$\Gamma^1_{ij}:$
+\begin{align*}
+    \Gamma^1_{ij} &= \frac{g^{1 k}}{2}\qty[\pdv{g_{ik}}{x^j} + \pdv{g_{jk}}{x^i} - \pdv{g_{ij}}{x^k}]\\
+    & = \frac{g^{1 1}}{2}\qty[\pdv{g_{i1}}{x^j} + \pdv{g_{j1}}{x^i} - \pdv{g_{ij}}{x^1}]
+\end{align*}
+当$i=j=1$时, $\Gamma^1_{11}=g^{11}\qty[\partial_r g_{11} + \partial_r g_{11} - \partial_r g_{11}]/2 = 0$\\
+当$i=j=2$时, $\Gamma^1_{22}=g^{11}\qty[-\partial_r g_{22}]/2 = -r$\\
+当$i\neq j$时, $\Gamma^1_{ij}=\Gamma^1_{ji}$, 取$i=1, j=2$, $\Gamma^1_{12} = g^{11}\qty[\partial_\theta g_{11}]/2 = 0$
+\paragraph{}
+同理计算$\Gamma^2_{ij}:$
+\begin{align*}
+    \Gamma^2_{ij} &= \frac{g^{2 k}}{2}\qty[\pdv{g_{ik}}{x^j} + \pdv{g_{jk}}{x^i} - \pdv{g_{ij}}{x^k}]\\
+    & = \frac{g^{22}}{2}\qty[\pdv{g_{i2}}{x^j} + \pdv{g_{j2}}{x^i} - \pdv{g_{ij}}{x^2}]
+\end{align*}
+当$i=j=1$时, $\Gamma^2_{11}=g^{22}\qty[- \partial_\theta g_{22}]/2 = 0$\\
+当$i=j=2$时, $\Gamma^2_{22}=g^{22}\qty[\partial_\theta g_{22}]/2 = 0$\\
+当$i\neq j$时, $\Gamma^2_{ij}=\Gamma^2_{ji}$, 取$i=1, j=2$, $\Gamma^1_{22} = g^{22}\qty[\partial_r g_{22}]/2 = 1/r$
+
+所以非零项只有$$\Gamma^2_{12}=\Gamma^2_{21}=\frac{1}{r};\quad \Gamma^1_{22} = -r$$
+\paragraph{(b)}
+将上面的克氏符带入到测地线方程\ref{geodesic}中, 得:
+\begin{align*}
+    \dv[2]{x^1}{t} + \Gamma^1_{22}\dv{x^2}{t}\dv{x^2}{t} &= 0\\
+    \dv[2]{x^2}{t} + 2\times\Gamma^2_{12}\dv{x^1}{t}\dv{x^2}{t} &= 0\\
+    \dv[2]{r}{t} -r\qty(\dv{\theta}{t})^2 &= 0\\
+    \dv[2]{\theta}{t} +\frac1r \dv{\theta}{t} \dv{r}{t}&= 0 \label{haha}\\
+\end{align*}

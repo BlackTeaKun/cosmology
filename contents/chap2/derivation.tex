@@ -1,0 +1,29 @@
+\begin{itemize}
+    \item 测地线方程
+    \begin{equation}
+        \dv[2]{x^l}{t} + \Gamma^l_{jk}\dv{x^j}{t}\dv{x^k}{t} = 0\label{geodesic}
+    \end{equation}
+    \begin{equation}
+        \dv[2]{x^\mu}{\lambda} + \Gamma^\mu_{\alpha\beta}\dv{x^\alpha}{\lambda}\dv{x^\beta}{\lambda} = 0\label{4dgeodesic}
+    \end{equation} 
+    \item 克里斯托弗记号(克氏符) 
+    \begin{equation}
+        \Gamma^\mu_{\alpha\beta} = \frac{g^{\mu\nu}}{2}\qty[\pdv{g_{\alpha\nu}}{x^\beta} + \pdv{g_{\beta\nu}}{x^\alpha} - \pdv{g_{\alpha\beta}}{x^\nu}]\label{chris}
+    \end{equation} 
+    \item FRW度规
+    \begin{equation}
+        g_{\mu\nu} = \mqty(\dmat[0]{-1, a(t)^2, a(t)^2, a(t)^2}) \label{FRWmertic}
+    \end{equation}
+    \item Ricci 张量
+    \begin{equation}
+        R_{\mu\nu} = \Gamma^\alpha_{\mu\nu, \alpha} - \Gamma^\alpha_{\mu\alpha, \nu} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{\mu\nu} - \Gamma^\alpha_{\beta\nu}\Gamma^\beta_{\mu\alpha}\label{riccit}
+    \end{equation} 
+    \item Ricci 标量
+    \begin{equation}
+        \mathcal{R} = R_{\mu\nu}g^{\mu\nu}
+    \end{equation}
+    \item 爱因斯坦场方程
+    \begin{equation}
+        G_{\mu\nu}\equiv R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}\mathcal{R} = 8\pi GT_{\mu\nu}\label{einsteineq}
+    \end{equation}
+\end{itemize}

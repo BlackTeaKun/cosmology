@@ -1,0 +1,42 @@
+\paragraph{(a)}
+在FRW度规\ref{FRWmertic}下计算$\Gamma^i_{\alpha\beta}$:
+\begin{align*}
+    \Gamma^i_{\alpha\beta} = \frac{g^{il}}{2}\qty[\pdv{g_{\alpha l}}{x^\beta} + \pdv{g_{\beta l}}{x^\alpha} - \pdv{g_{\alpha\beta}}{x^l}]
+\end{align*}
+
+$\Gamma^i_{00}$:
+\begin{align*}
+    \Gamma^i_{00} &= \frac{g^{il}}{2}\qty[\pdv{g_{0 l}}{x^0} + \pdv{g_{0 l}}{x^0} - \pdv{g_{00}}{x^l}]\\
+        &=g^{il}\pdv{g_{0 l}}{x^0} = 0
+\end{align*}
+$\Gamma^i_{0j} = \Gamma^i_{j0}$:
+\begin{align*}
+    \Gamma^i_{j0} &= \frac{g^{il}}{2}\qty[\pdv{g_{j l}}{x^0} + \pdv{g_{0 l}}{x^j} - \pdv{g_{j0}}{x^l}]\\
+    &=\frac{g^{il}}{2} \pdv{g_{j l}}{x^0} = \delta_{ij}\frac{\dot{a}}{a}
+\end{align*}
+$\Gamma^i_{jk}$:
+\begin{align*}
+    \Gamma^i_{jk} &= \frac{g^{il}}{2}\qty[\pdv{g_{j l}}{x^k} + \pdv{g_{k l}}{x^j} - \pdv{g_{jk}}{x^l}]\\
+        &=\frac{1}{2a^2}\delta_{il}\qty[\delta_{j l}\pdv{a^2}{x^k} + \delta_{k l}\pdv{a^2}{x^j} - \delta_{jk}\pdv{a^2}{x^l}]\\
+        &=\frac{1}{a}\qty[\delta_{ij}\pdv{a}{x^k} + \delta_{ik}\pdv{a}{x^j} - \delta_{jk}\pdv{a}{x^i}]\\
+        &=0
+\end{align*}
+
+\paragraph{(b)}
+\begin{align*}
+    R_{ij} =& \Gamma^\alpha_{ij, \alpha} - \Gamma^\alpha_{i\alpha, j} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{ij} - \Gamma^\alpha_{\beta j}\Gamma^\beta_{i \alpha} \\
+        =&\qty(\Gamma^0_{ij, 0} + \Gamma^k_{ij, k}) - \qty(\Gamma^0_{i0, j} + \Gamma^k_{ik, j}) + \qty(\Gamma^0_{\beta 0} + \Gamma^k_{\beta k})\Gamma^\beta_{ij} - \qty(\Gamma^0_{\beta j}\Gamma^\beta_{i 0} + \Gamma^k_{\beta j}\Gamma^\beta_{i k})\\
+        =&\qty(\Gamma^0_{ij, 0} + \Gamma^k_{ij, k}) - \qty(\Gamma^0_{i0, j} + \Gamma^k_{ik, j}) + \qty(\Gamma^0_{0 0} + \Gamma^k_{0 k})\Gamma^0_{ij} + \qty(\Gamma^0_{n 0} + \Gamma^k_{n k})\Gamma^n_{ij} - \\
+         &\qty(\Gamma^0_{0 j}\Gamma^0_{i 0} + \Gamma^0_{n j}\Gamma^n_{i 0} + \Gamma^k_{0 j}\Gamma^0_{i k} + \Gamma^k_{n j}\Gamma^n_{i k})\\
+        =&\qty[\partial_0\qty(\delta_{ij}\dot{a}a) + 0] - \qty(0+0) + \qty(0+\delta_{kk}\frac{\dot{a}}{a})\delta_{ij}\dot{a}a + \qty(0+0)\times 0 - \\
+         &\qty(0\times0+\delta_{nj}\dot{a}a\delta_{ni}\frac{\dot{a}}{a} + \delta_{kj}\frac{\dot{a}}{a}\delta_{ik}\dot{a}a + 0)\\
+        =&\delta_{ij} \qty(\ddot{a}a + \dot{a}^2) + 3\delta_{ij}\dot{a}^2 - 2\delta_{ij}\dot{a}^2\\
+        =&\delta_{ij} \qty(\ddot{a}a + 2\dot{a}^2)
+\end{align*}
+\begin{align*}
+    R_{i0} =&\qty(\Gamma^0_{i0, 0} + \Gamma^k_{i0, k}) - \qty(\Gamma^0_{i0, 0} + \Gamma^k_{ik, 0}) + \qty(\Gamma^0_{0 0} + \Gamma^k_{0 k})\Gamma^0_{i0} + \qty(\Gamma^0_{n 0} + \Gamma^k_{n k})\Gamma^n_{i0} - \\
+        &\qty(\Gamma^0_{0 0}\Gamma^0_{i 0} + \Gamma^0_{n 0}\Gamma^n_{i 0} + \Gamma^k_{0 0}\Gamma^0_{i k} + \Gamma^k_{n 0}\Gamma^n_{i k})\\
+        =& \qty[0+\delta_{ki}\partial_k\qty(\frac{\dot{a}}{a})] - \qty(0 + 0) + \qty(0 + \Gamma^k_{ik, 0}) \times 0 + \qty(0 + 0)\times\Gamma^n_{i0} - \\
+        &\qty(0\times0 + 0 \times \Gamma^n_{i 0} + 0 \times \Gamma^0_{i k} + \Gamma^k_{n 0} \times 0)
+        = 0
+\end{align*}

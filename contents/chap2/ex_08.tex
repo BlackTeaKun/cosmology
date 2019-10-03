@@ -1,0 +1,179 @@
+开放宇宙线元:
+\begin{equation*}
+    \dd s^2 = -\dd t^2 + a^2(t)\qty{\frac{\dd r^2}{1+\Omega_kH_0^2r^2} + r^2\qty(\dd \theta^2 + \sin^2 \theta \dd \phi^2)}
+\end{equation*}
+其度规为:
+\begin{align*}
+    g_{\mu\nu} = \mqty(\dmat[0]{-1, \frac{a^2(t)}{1 + \Omega_kH_0^2r^2}, r^2a^2(t), r^2\sin^2\theta a^2(t)})
+\end{align*}
+\paragraph{(a)}
+由\ref{chris}:
+\begin{align*}
+    \Gamma^\mu_{\alpha\beta} &= \frac{g^{\mu\nu}}{2}\qty[\pdv{g_{\alpha\nu}}{x^\beta} + \pdv{g_{\beta\nu}}{x^\alpha} - \pdv{g_{\alpha\beta}}{x^\nu}]\\
+\end{align*}
+$\Gamma^0_{\alpha\beta}$
+\begin{align*}
+    \Gamma^0_{\alpha\beta} &= \frac{g^{00}}{2}\qty[\pdv{g_{\alpha 0}}{x^\beta} + \pdv{g_{\beta 0}}{x^\alpha} - \pdv{g_{\alpha\beta}}{x^0}]\\        
+\end{align*}
+因为$\Gamma^0_{00} = 0$:
+\begin{align*}
+    \Gamma^0_{ij} &= -\frac{g^{00}}{2}\pdv{g_{ij}}{t} \\
+    &=\frac{1}{2}g_{ij}\times \frac{2}{a}\dv{a}{t} \\
+    &=g_{ij}H
+\end{align*}
+计算$\Gamma^i_{\alpha 0} =\Gamma^i_{0\alpha} $
+\begin{align*}
+    \Gamma^i_{\alpha 0} &= \frac{g^{i\nu}}{2}\qty[\pdv{g_{\alpha \nu}}{x^0} + \pdv{g_{0 \nu}}{x^\alpha} - \pdv{g_{\alpha 0}}{x^\nu}]\\        
+        &= \frac{g^{ik}}{2}\pdv{g_{\alpha k}}{t}
+\end{align*}
+非零项为:
+\begin{align*}
+    \Gamma^i_{j0} &=\frac{g^{ik}}{2}\pdv{g_{jk}}{t}\\
+    & = \frac{g^{ik}}{2}g_{jk}\frac{2a\dd a/\dd t}{a^2}\\
+    & = \delta^i_jH
+\end{align*}
+计算$\Gamma^i_{jk}$:
+\begin{align*}
+    \Gamma^i_{jk} &= \frac{g^{i\nu}}{2}\qty[\pdv{g_{j\nu}}{x^k} + \pdv{g_{k\nu}}{x^j} - \pdv{g_{jk}}{x^\nu}]\\
+        &=\frac{g^{il}}{2}\qty[\pdv{g_{jl}}{x^k} + \pdv{g_{kl}}{x^j} - \pdv{g_{jk}}{x^l}]\\
+        &=\frac{I(i)}{2}\qty[g_{ji,k} + g_{ki, j} - g_{jk, i}]
+\end{align*}
+\begin{align*}
+    \Gamma^1_{11} &= \frac{g^{11}}{2}g_{11,1} = -\frac{\Omega_kH_0^2r}{1 +\Omega_kH_0^2r^2}\\
+    \Gamma^1_{22} &= -\frac{g^{11}}{2}g_{22,1} = -r\qty(1 + \Omega_kH_0^2r^2)\\
+    \Gamma^1_{33} &= -\frac{g^{11}}{2}g_{33,1} = -r\sin^2\theta\qty(1 + \Omega_kH_0^2r^2)\\\
+    \Gamma^1_{12} &= \Gamma^1_{21} = \frac{g^{11}}{2}g_{11,2} = 0\\
+    \Gamma^1_{13} &= \Gamma^1_{31} = \frac{g^{11}}{2}g_{11,3} = 0\\
+    \Gamma^1_{23} &= \Gamma^1_{32} = 0 \\
+    \Gamma^2_{11} &= -\frac{g^{22}}{2}g_{11,2} = 0\\
+    \Gamma^2_{22} &= \frac{g^{22}}{2}g_{22,2} = 0\\
+    \Gamma^2_{33} &= -\frac{g^{22}}{2}g_{33,2} = -\sin\theta\cos\theta\\
+    \Gamma^2_{12} &= \Gamma^2_{21} = \frac{g^{22}}{2}g_{22,1} = \frac{1}{r} \\
+    \Gamma^2_{13} &= \Gamma^2_{31} = 0 \\
+    \Gamma^2_{23} &= \Gamma^2_{32} = 0 \\
+    \Gamma^3_{11} &= -\frac{g^{33}}{2}g_{11,3} = 0 \\
+    \Gamma^3_{22} &= -\frac{g^{33}}{2}g_{22,3} = 0 \\
+    \Gamma^3_{33} &= \frac{g^{33}}{2}g_{33,3} = 0 \\
+    \Gamma^3_{12} &= \Gamma^3_{21} = 0 \\
+    \Gamma^3_{13} &= \Gamma^3_{31} = \frac{g^{33}}{2}g_{33,1} = \frac{1}{r}\\
+    \Gamma^3_{23} &= \Gamma^3_{32} = \frac{g^{33}}{2}g_{33,2} = \frac{\cos\theta}{\sin\theta}\\
+\end{align*}
+
+
+\paragraph{(b)}
+由Ricci张量的定义\ref{riccit}:
+\begin{align*}
+    R_{\mu\nu} &= \Gamma^\alpha_{\mu\nu, \alpha} - \Gamma^\alpha_{\mu\alpha, \nu} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{\mu\nu} - \Gamma^\alpha_{\beta\nu}\Gamma^\beta_{\mu\alpha}\\
+\end{align*}
+\begin{align*}
+    R_{00} &= \Gamma^\alpha_{00, \alpha} - \Gamma^\alpha_{0\alpha, 0} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{00} - \Gamma^\alpha_{\beta 0}\Gamma^\beta_{0\alpha}\\
+        & = 0 - \Gamma^i_{0i,0} + 0 - \Gamma^i_{j0}\Gamma^j_{0i}\\
+        & = -\delta^i_i\partial_tH - \delta^i_j\delta^j_iH^2 \\
+        & = -3\qty(\dot{H} + H^2)\\
+        & = -3\qty[\dv{t}(\frac{\dot{a}}{a}) + \qty(\frac{\dot{a}}{a})^2]\\
+        & = -3\qty[\frac{a\ddot{a} - \dot{a}^2}{a^2} +\qty(\frac{\dot{a}}{a})^2]\\
+        & = -3 \frac{\ddot{a}}{a}
+\end{align*}
+\begin{align*}
+    R_{ij} &= \Gamma^\alpha_{ij, \alpha} - \Gamma^\alpha_{i\alpha, j} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{ij} - \Gamma^\alpha_{\beta j}\Gamma^\beta_{i\alpha}\\
+        & = \qty(\Gamma^0_{ij, 0} + \Gamma^k_{ij, k}) - \Gamma^k_{ik,j} + \Gamma^k_{\beta k}\Gamma^\beta_{ij} - \qty(\Gamma^0_{\beta j}\Gamma^\beta_{i0} + \Gamma^k_{\beta j}\Gamma^\beta_{ik}) \\
+        & = \qty(\Gamma^0_{ij, 0} + \Gamma^k_{ij, k}) - \Gamma^k_{ik,j} + \qty(\Gamma^k_{0 k}\Gamma^0_{ij} + \Gamma^k_{l k}\Gamma^l_{ij}) - \qty(\Gamma^0_{l j}\Gamma^l_{i0} + \Gamma^k_{0 j}\Gamma^0_{ik} + \Gamma^k_{l j}\Gamma^l_{ik}) \\
+        & = \partial_t\qty(g_{ij}H) + \Gamma^k_{ij, k} - \Gamma^k_{ik,j} + \delta^k_kg_{ij}H^2 + \Gamma^k_{lk}\Gamma^l_{ij} - g_{lj}\delta^l_iH^2 - \delta^k_jg_{ik}H^2 - \Gamma^k_{lj}\Gamma^l_{ik}\\
+        & = g_{ij}\qty(2H^2 + \dot{H}) + \Gamma^k_{ij, k} - \Gamma^k_{ik,j} + 3g_{ij}H^2 + \Gamma^k_{lk}\Gamma^l_{ij} - 2g_{ij}H^2 -  \Gamma^k_{lj}\Gamma^l_{ik}\\
+        & = g_{ij}\qty(3H^2 + \dot{H}) + \Gamma^k_{ij, k} - \Gamma^k_{ik,j}  + \Gamma^k_{lk}\Gamma^l_{ij}  -  \Gamma^k_{lj}\Gamma^l_{ik} \\
+        & = g_{ij}\qty[2H^2 + \frac{\ddot{a}}{a}]+ \Gamma^k_{ij, k} - \Gamma^k_{ik,j}  + \Gamma^k_{lk}\Gamma^l_{ij}  -  \Gamma^k_{lj}\Gamma^l_{ik} \\
+\end{align*}
+每项的计算:\\
+(1)\\
+\begin{align*}
+    \Gamma^k_{ij,k} =& \Gamma^1_{ij, 1} + \Gamma^2_{ij, 2} + \Gamma^3_{ij, 3}\\
+        =&\mqty(\Gamma^1_{11,1} & 0 & 0 \\ 0 & \Gamma^1_{22,1} & 0 \\ 0 & 0 & \Gamma^1_{33,1} + \Gamma^2_{33,2})\\
+        % =&\partial_r \mqty(\dmat[0]{-\frac{\Omega_kH_0^2r}{1 +\Omega_kH_0^2r^2}, -r\qty(1 + \Omega_kH_0^2r^2),  -r\sin^2\theta\qty(1 + \Omega_kH_0^2r^2)})\\
+        % &+\partial_\theta\mqty(0&1/r&0\\1/r&0&0 \\0&0&-\sin\theta\cos\theta) + 0 \\
+\end{align*}
+% \begin{align*}
+%     \Gamma^k_{11,k} &= \partial_1\partial_1\ln g_{11} - \frac{1}{2}\partial_l\partial_lg_{11} =\frac{1}{2}\partial_1\partial_1\ln g_{11}\\
+%     \Gamma^k_{22,k} &= \partial_2\partial_2\ln g_{22} - \frac{1}{2}\partial_l\partial_lg_{22} = -\frac{1}{2}\partial_1\partial_1\ln g_{22}\\
+%     \Gamma^k_{33,k} &= \partial_3\partial_3\ln g_{33} - \frac{1}{2}\partial_l\partial_lg_{33} = -\frac12\qty(\partial_1\partial_1g_{33}+\partial_2\partial_2g_{33})\\
+%     \Gamma^k_{12,k} &= \Gamma^k_{21,k}=\Gamma^k_{13,k}=\Gamma^k_{31,k}=\Gamma^k_{23,k}=\Gamma^k_{32,k} = 0
+% \end{align*}
+(2)
+\begin{align*}
+    \Gamma^k_{ik,j} &= \Gamma^1_{i1,j} + \Gamma^2_{i2,j} + \Gamma^3_{i3,j}\\
+    &=\mqty(\Gamma^1_{11,1} + \Gamma^2_{12,1} + \Gamma^3_{13,1} & 0 & 0 \\ 0 & \Gamma^3_{23,2} & 0\\ 0 & 0 & 0)
+\end{align*}
+% \begin{align*}
+%     \Gamma^k_{1k,1} &= \frac{1}{2}\partial_1\partial_1\ln\qty(g_{11}g_{22}g_{33})\\
+%     \Gamma^k_{2k,2} &= \frac{1}{2}\partial_2\partial_2\ln\qty(g_{11}g_{22}g_{33})\\
+%     \Gamma^k_{3k,3} &= \frac{1}{2}\partial_3\partial_3\ln\qty(g_{11}g_{22}g_{33}) = 0\\
+%     \Gamma^k_{1k,2} &= \Gamma^k_{2k,1} = \frac{1}{2}\partial_1\partial_2\ln\qty(g_{11}g_{22}g_{33}) \\
+%     \Gamma^k_{1k,3} &= \Gamma^k_{3k,1} = \Gamma^k_{2k,3} = \Gamma^k_{3k,2} = 0
+% \end{align*}
+(3)
+\begin{align*}
+    \Gamma^k_{lk}\Gamma^l_{ij} &= \Gamma^1_{ij}\qty(\Gamma^1_{11} + \Gamma^2_{12} + \Gamma^3_{13}) + \Gamma^2_{ij}\qty(\Gamma^1_{21} + \Gamma^2_{22} + \Gamma^3_{23}) + \Gamma^3_{ij}\qty(\Gamma^1_{31} + \Gamma^2_{32} + \Gamma^3_{33}) \\
+        & = \Gamma^1_{ij}\qty(\Gamma^1_{11} + \Gamma^2_{12} + \Gamma^3_{13}) + \Gamma^2_{ij}\Gamma^3_{23}\\
+        & = \mqty(\Gamma^1_{11}\qty(\Gamma^1_{11} + \Gamma^2_{12} + \Gamma^3_{13}) & \Gamma^2_{12}\Gamma^3_{23} & 0 \\ 
+                    \Gamma^2_{21}\Gamma^3_{23} & \Gamma^1_{22}\qty(\Gamma^1_{11} + \Gamma^2_{12} + \Gamma^3_{13}) & 0\\
+                    0 & 0 & \Gamma^1_{33}\qty(\Gamma^1_{11} + \Gamma^2_{12} + \Gamma^3_{13}) + \Gamma^2_{33}\Gamma^3_{23})
+\end{align*}
+% \begin{align*}
+%     \Gamma^k_{lk}\Gamma^l_{11} &= \frac{1}{4}\partial_1\ln(g_{11}g_{22}g_{33})\partial_1\ln g_{11}\\
+%     \Gamma^k_{lk}\Gamma^l_{22} &= \frac{1}{4}\qty{-I(1)\partial_1\ln \qty(g_{11}g_{22}g_{33})\partial_1g_{22}}\\
+%     \Gamma^k_{lk}\Gamma^l_{33} &= \frac{1}{4}\partial_1\ln(g_{11}g_{22}g_{33})\partial_1\ln g_{11}
+% \end{align*}
+(4)
+\begin{align*}
+    \Gamma^k_{lj}\Gamma^l_{ik} &= \Gamma^1_{1j}\Gamma^1_{i1} + \Gamma^2_{1j}\Gamma^1_{i2} + \Gamma^3_{1j}\Gamma^1_{i3} + \Gamma^1_{2j}\Gamma^2_{i1} + \Gamma^2_{2j}\Gamma^2_{i2} + \Gamma^3_{2j}\Gamma^2_{i3} + \Gamma^1_{3j}\Gamma^3_{i1} + \Gamma^2_{3j}\Gamma^3_{i2} + \Gamma^3_{3j}\Gamma^3_{i3} \\
+    &=\mqty(\Gamma^1_{11}\Gamma^1_{11} + \Gamma^2_{21}\Gamma^2_{12} + \Gamma^3_{31}\Gamma^3_{13} & \Gamma^3_{32}\Gamma^3_{13} & 0\\
+        \Gamma^3_{31}\Gamma^3_{23} & 2\Gamma^1_{22}\Gamma^2_{21} + \Gamma^3_{32}\Gamma^3_{23} & 0\\
+        0 & 0 & \Gamma^3_{23}\Gamma^2_{33} + 2\Gamma^1_{33}\Gamma^3_{31} + \Gamma^2_{33}\Gamma^3_{32})
+\end{align*}
+\begin{align*}
+    \Gamma^k_{ij,k} - \Gamma^k_{ik,j} &= \mqty(-\Gamma^2_{12,1}-\Gamma^3_{13,1} & 0 & 0\\
+        0 & \Gamma^1_{22,1} - \Gamma^3_{23,2} & 0 \\
+        0 & 0 & \Gamma^1_{33,1} + \Gamma^2_{33,2}) \\
+        & =\mqty(\frac{2}{r^2} & 0 & 0 \\ 0 & -\qty(1 + 3\Omega_kH_0^2r^2) + 1/\sin^2\theta & 0 \\ 0 & 0 & -\sin^2\theta\qty(1 + 3\Omega_kH_0^2r^2) - \cos 2\theta ) \\
+        & =\mqty(\frac{2}{r^2} & 0 & 0 \\ 0 &  - 3\Omega_kH_0^2r^2 + \frac{\cos^2\theta}{\sin^2\theta} & 0 \\ 0 & 0 &  -3\Omega_kH_0^2r^2\sin^2\theta - \cos^2\theta ) 
+\end{align*}
+\begin{align*}
+    &\Gamma^k_{lk}\Gamma^l_{ij}  -  \Gamma^k_{lj}\Gamma^l_{ik} \\
+        =& \mqty(\Gamma^1_{11}\qty(\Gamma^2_{12} + \Gamma^3_{13}) - \Gamma^2_{12}\Gamma^2_{21} - \Gamma^3_{13}\Gamma^3_{31}   & \Gamma^3_{32}\qty(\Gamma^2_{12} - \Gamma^3_{13})& 0 \\
+        \Gamma^3_{23}\qty(\Gamma^2_{21} - \Gamma^3_{31}) & \Gamma^1_{22}\qty(\Gamma^1_{11}-\Gamma^2_{12}+\Gamma^3_{13}) - \Gamma^3_{32}\Gamma^3_{23}& 0 \\ 
+        0 & 0 & \Gamma^1_{33}\qty(\Gamma^1_{11}+\Gamma^2_{12} - \Gamma^3_{31}) - \Gamma^3_{23}\Gamma^2_{33}) \\
+        =&\mqty(-\frac{2\Omega_kH_0^2}{1+\Omega_kH_0^2r^2} - \frac{2}{r^2} & 0 & 0\\ 0& \Omega_kH_0^2r^2 - \frac{\cos^2\theta}{\sin^2\theta}&0\\0&0& \Omega_kH_0^2\sin^2\theta r^2 + \cos^2\theta ) 
+\end{align*}
+\begin{align*}
+    &\Gamma^k_{ij, k} - \Gamma^k_{ik,j}  + \Gamma^k_{lk}\Gamma^l_{ij}  -  \Gamma^k_{lj}\Gamma^l_{ik} \\
+    =&\mqty(-\frac{2\Omega_kH_0^2}{1+\Omega_kH_0^2r^2}  & 0 & 0\\ 0& -2\Omega_kH_0^2r^2 &0\\0&0& -2\Omega_kH_0^2\sin^2\theta r^2 ) \\
+    =&-\frac{2\Omega_kH_0^2}{a^2}g_{ij}
+\intertext{最终}
+    R_{ij} =& g_{ij}\qty(2H^2+\frac{\ddot{a}}{a} - \frac{2\Omega_kH_0^2}{a^2})
+\end{align*}
+\paragraph{(c)}
+Ricci标量:
+\begin{align*}
+    \mathcal{R} &= g^{\mu\nu}R_{\mu\nu} = g^{00}R_{00} + g^{11}R_{11} +g^{22}R_{22} +g^{33}R_{33}\\
+        &=-R_{00} + \qty(g^{11}g_{11} + g^{22}g_{22} + g^{33}g_{33})  \qty(2H^2+\frac{\ddot{a}}{a} - \frac{2\Omega_kH_0^2}{a^2})\\
+        &=3\frac{\ddot{a}}{a} + 3\qty(2H^2+\frac{\ddot{a}}{a} - \frac{2\Omega_kH_0^2}{a^2})\\
+        &=6\qty(H^2+\frac{\ddot{a}}{a} - \frac{\Omega_kH_0^2}{a^2})
+\end{align*}
+爱因斯坦场方程\ref{einsteineq}:
+\begin{align*}
+    G_{\mu\nu}\equiv R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}\mathcal{R} = 8\pi GT_{\mu\nu}\\
+\end{align*}
+时间分量:
+\begin{align*}
+    R_{00} + \frac{1}{2}\mathcal{R} &= 8\pi G T_{00}\\
+    -3\frac{\ddot{a}}{a} + 3\qty(H^2+\frac{\ddot{a}}{a} - \frac{\Omega_kH_0^2}{a^2}) &= 8\pi G T^\mu_0g_{\mu 0}\\
+    3\qty(H^2 - \frac{\Omega_kH_0^2}{a^2}) &= 8\pi G \rho \\
+    H^2 - \frac{\Omega_kH_0^2}{a^2} &= \frac{8\pi G }{3}\rho\\
+\end{align*}
+空间分量
+\begin{align*}
+    R_{ii} - \frac{1}{2}g_{ii}\mathcal{R} &= 8 \pi G T^\tau_ig_{\tau i} &\text{$i$ 不求和} \\
+    g_{ii}\qty(2H^2+\frac{\ddot{a}}{a} - \frac{2\Omega_kH_0^2}{a^2}) - 3g_{ii}\qty(H^2+\frac{\ddot{a}}{a} - \frac{\Omega_kH_0^2}{a^2}) &= 8\pi G \mathcal{P} g_{ii}\\
+    \frac{\Omega_kH_0^2}{a^2} - H^2 - 2 \frac{\ddot{a}}{a} &= 8\pi G\mathcal{P} \\
+    -2\frac{\ddot{a}}{a} &= 8\pi G \qty(\mathcal{P} + \frac{\rho}{3})\\
+    \frac{\ddot{a}}{a} &= -\frac{4\pi G}{3}\qty(3\mathcal{P} + \rho)
+\end{align*}

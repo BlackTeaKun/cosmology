@@ -1,0 +1,28 @@
+\begin{align*}
+    \chi(a) &= \int_a^1\frac{\dd a'}{a'^2H(a')}
+    d_L(a) &= \frac{\chi(a)}{a}\\
+    m-M &= 5\log\qty(\frac{d_L}{10\rm{pc}}) + K\\
+\intertext{在物质主导的宇宙下:}
+    \chi(a) &= \frac{2}{H_0}(1-\sqrt{a})  &&\text{(见\ref{1:12}推导)} \\
+    d_L(a) &= \frac{\chi(a)}{a} = \frac{2}{H_0}\frac{1- \sqrt{a}}{a} = 2997.92h^{-1}  \frac{2 - 2\sqrt{a}}{a} \rm{Mpc.}\\
+    d_L(z) &= 5995.84h^{-1}(1+z)\qty(1-\sqrt{\frac{1}{1+z}})\rm{Mpc.}\\
+    m-M &= 5\log\qty[\qty(1+z)\qty(1 - \sqrt{\frac{1}{1+z}})] + 5\log(5.99584h^{-1}\times10^8) + K\\
+\intertext{在平坦, $30\%$物质$70\%$暗能量的宇宙下:}
+    \chi(a) &= \frac{1}{H_0}\int_a^1\frac{\dd a'}{\sqrt{0.3a' + 0.7a'^4}} \\
+    \chi(z) &= \frac{1}{H_0}\int_{\frac{1}{1+z}}^1\frac{\dd a'}{\sqrt{0.3a' + 0.7a'^4}} \\
+    d_L(z) &=  2.99792h^{-1}\times10^9(1+z)\int_{\frac{1}{1+z}}^1\frac{\dd a'}{\sqrt{0.3a' + 0.7a'^4}}\rm{pc.} \\
+    m - M &= 5\log\qty[(1+z)\int_{\frac{1}{1+z}}^1\frac{\dd a'}{\sqrt{0.3a' + 0.7a'^4}}] + 5\log\qty(2.99792h^{-1}\times10^8) + K
+\end{align*}
+\begin{tikzpicture}[scale=1.5]
+    \begin{semilogxaxis}[
+        title=a,
+        xlabel={$z$},
+        ylabel={$m-M$},
+        legend entries={no $\Lambda$, with $\Lambda$},
+        legend pos=south east,
+        log ticks with fixed point,
+    ]
+        \addplot[no markers] table[x=z, y=m1, col sep=comma]{./contents/chap2/data16_2.csv};
+        \addplot[no markers, dashed] table[x=z, y=m2, col sep=comma]{./contents/chap2/data16_2.csv};
+    \end{semilogxaxis}
+\end{tikzpicture}

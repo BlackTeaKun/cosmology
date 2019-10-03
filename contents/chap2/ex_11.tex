@@ -1,0 +1,22 @@
+\paragraph{(a)}
+物质主导宇宙:
+\begin{align*}
+    \dv{a}{t} &= aH_0\sqrt{\frac{\rho}{\rho_{cr}}} = aH_0\sqrt{\frac{1}{a^3}}\\
+    \dd t &= \frac{1}{H_0}\sqrt{a}\dd a\\
+    \eta &= \int_0^t\frac{\dd t'}{a(t')} = \frac{1}{H_0}\int_0^a\frac{\sqrt{a'}}{a'}\dd a'\\
+        &= \frac{2}{H_0}a^{\frac{1}{2}}\\
+    \eta &\propto a^{\frac{1}{2}}\\
+\intertext{辐射主导宇宙:}
+    \dv{a}{t} &= aH_0\sqrt{\frac{\rho}{\rho_{cr}}} = aH_0\sqrt{\frac{1}{a^4}}\\
+    \dd t &= \frac{1}{H_0}a\dd a\\
+    \eta &= \int_0^t\frac{\dd t'}{a(t')} = \frac{1}{H_0}\int_0^a\dd a'\\
+        &=\frac{a}{H_0}\\
+    \eta &\propto a\\
+\end{align*}
+\paragraph{(b)}
+\begin{align*}
+    \dv{a}{t} &= aH_0\sqrt{\frac{\rho}{\rho_{cr}}} = aH_0\sqrt{\frac{\Omega_m}{a^3} + \frac{\Omega_r}{a^4}} = H_0\sqrt{\Omega_m}\sqrt{\frac{1}{a} + \frac{a_{eq}}{a^2}} & \text{书51页$\to\Omega_r = a_{eq}\Omega_m$}\\
+    \dd t &= \frac{1}{\sqrt{H_0^2\Omega_m}}\frac{a\dd a}{\sqrt{a + a_{eq}}}\\
+    \eta &= \frac{1}{\sqrt{H_0^2\Omega_m}}\int_0^a\frac{\dd a'}{\sqrt{a' + a_{eq}}}\\
+        & = \frac{2}{\sqrt{H_0^2\Omega_m}}\qty(\sqrt{a + a_{eq}} - \sqrt{a_{eq}}) 
+\end{align*}

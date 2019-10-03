@@ -1,0 +1,73 @@
+\paragraph{(a)}
+度规$g_{\mu\nu}$:
+$$g_{\mu\nu} = \mqty(\dmat[0]{-1, r^2, r^2\sin^2\theta})$$
+坐标$x^\mu = \qty{t, \theta, \phi}, \mu = 1,2,3$\\
+利用\ref{chris}:
+\begin{align*}
+    \Gamma^\mu_{\alpha\beta} &= \frac{g^{\mu\nu}}{2}\qty[\pdv{g_{\alpha\nu}}{x^\beta} + \pdv{g_{\beta\nu}}{x^\alpha} - \pdv{g_{\alpha\beta}}{x^\nu}]\\
+    &=\frac{\delta^{\mu\nu}i(\mu)}{2}\qty[\delta_{\alpha\nu}\pdv{d(\alpha)}{x^\beta} + \delta_{\beta\nu}\pdv{d(\beta)}{x^\alpha} - \delta_{\alpha\beta}\pdv{d(\alpha)}{x^\nu}]\\
+    &=\frac{i(\mu)}{2}\qty[\delta_\alpha^\mu\pdv{d(\mu)}{x^\beta} + \delta_\beta^\mu\pdv{d(\mu)}{x^\alpha} - \delta_{\alpha\beta}\pdv{d(\alpha)}{x^\mu}]
+\end{align*}
+其中$d(\mu) = \qty{-1, r^2, r^2\sin^2\theta}, i(\mu) = \qty{-1, {1}/{r^2}, {1}/(r^2\sin^2\theta)} \mu = 1, 2, 3$\\
+$\Gamma^1_{\alpha\beta}:$
+\begin{align*}
+    \Gamma^1_{\alpha\beta} &=\frac{i(1)}{2}\qty[\delta_\alpha^1\pdv{d(1)}{x^\beta} + \delta_\beta^1\pdv{d(1)}{x^\alpha} - \delta_{\alpha\beta}\pdv{d(\alpha)}{x^1}]\\
+    &=0
+\end{align*}
+
+$\Gamma^2_{\alpha\beta}:$
+\begin{align*}
+    \Gamma^2_{\alpha\beta} &=\frac{i(2)}{2}\qty[\delta_\alpha^2\pdv{d(2)}{x^\beta} + \delta_\beta^2\pdv{d(2)}{x^\alpha} - \delta_{\alpha\beta}\pdv{d(\alpha)}{x^2}]\\
+    &=-\frac{i(2)}{2}\delta_{\alpha\beta}\pdv{d(\alpha)}{x^2}\\
+    \Gamma^2_{33} &= -\frac{1}{2r^2}\pdv{r^2\sin^2\theta}{\theta} = -\sin\theta\cos\theta
+\end{align*}
+
+$\Gamma^3_{\alpha\beta}:$
+\begin{align*}
+    \Gamma^3_{\alpha\beta} &=\frac{i(3)}{2}\qty[\delta_\alpha^3\pdv{d(3)}{x^\beta} + \delta_\beta^3\pdv{d(3)}{x^\alpha} - \delta_{\alpha\beta}\pdv{d(\alpha)}{x^3}]\\
+    &=\frac{1}{2r^2\sin^2\theta}\qty[\delta_\alpha^3\pdv{r^2\sin^2\theta}{x^\beta} + \delta_\beta^3\pdv{r^2\sin^2\theta}{x^\alpha}]\\
+    \Gamma^3_{32} = \Gamma^3_{23} &=\frac{1}{2r^2\sin^2\theta}\pdv{r^2\sin^2\theta}{x^2}\\
+    & =\frac{\cos\theta}{\sin\theta}
+\end{align*}
+\paragraph{(b)}
+由测地线方程\ref{4dgeodesic}:
+\begin{align*}
+        \dv[2]{x^2}{t} + \Gamma^2_{jk}\dv{x^j}{t}\dv{x^k}{t} &= 0\\
+        \dv[2]{\theta}{t} + \Gamma^2_{33}\dv{\phi}{t}\dv{\phi}{t} &= 0\\
+        \ddot{\theta} - \sin\theta\cos\theta\dot{\phi}^2 &=0
+\end{align*}
+ \begin{align*}
+        \dv[2]{x^3}{t} + \Gamma^3_{jk}\dv{x^j}{t}\dv{x^k}{t} &= 0\\
+        \dv[2]{\phi}{t} + 2\Gamma^3_{23}\dv{\theta}{t}\dv{\phi}{t} &= 0\\
+        \ddot{\phi} + 2\frac{\cos\theta}{\sin\theta}\dot{\theta}\dot{\phi} &=0
+\end{align*}
+\paragraph{(c)}
+Ricci 张量\ref{riccit}:
+\begin{align*}
+    R_{\mu\nu} &= \Gamma^\alpha_{\mu\nu, \alpha} - \Gamma^\alpha_{\mu\alpha, \nu} + \Gamma^\alpha_{\beta\alpha}\Gamma^\beta_{\mu\nu} - \Gamma^\alpha_{\beta\nu}\Gamma^\beta_{\mu\alpha}\\
+    &=\Gamma^2_{\mu\nu,2} + \Gamma^3_{\mu\nu,3} - \Gamma^3_{\mu3, \nu} + \Gamma^3_{\beta 3}\Gamma^\beta_{\mu\nu} - \qty(\Gamma^2_{\beta\nu}\Gamma^\beta_{\mu 2} + \Gamma^3_{\beta\nu}\Gamma^\beta_{\mu 3})\\
+    &=\Gamma^2_{\mu\nu,2} + \Gamma^3_{\mu\nu,3} - \Gamma^3_{\mu3, \nu} +\Gamma^3_{2 3}\Gamma^2_{\mu\nu} - \qty(\Gamma^2_{3\nu}\Gamma^3_{\mu 2} + \Gamma^3_{2\nu}\Gamma^2_{\mu 3} + \Gamma^3_{3\nu}\Gamma^3_{\mu 3})\\
+\end{align*}
+\begin{align*}
+    R_{22} &= 0 + 0 - \Gamma^3_{23, 2} - \qty(0 + 0 + \Gamma^3_{32}\Gamma^3_{23})\\
+        &=-\partial_\theta\frac{\cos\theta}{\sin\theta} - \qty(\frac{\cos\theta}{\sin\theta})^2\\
+        &=\frac{1}{\sin^2\theta}-\frac{\cos^2\theta}{\sin^2\theta} \\
+        &=1\\
+    \\
+    R_{23} &= 0 + \Gamma^3_{23,3}-\Gamma^3_{23,3} + 0 - \qty(0 + 0 + 0)\\
+        &= 0\\
+    \\
+    R_{32} &= 0 + \Gamma^3_{32,3} - 0 + 0 - \qty(0 + 0 + 0)\\
+    &=0\\
+    \\
+    R_{33} &= \Gamma^2_{33,2} + 0 - 0 + \Gamma^3_{23}\Gamma^2_{33} - \qty(\Gamma^2_{33}\Gamma^3_{32}+\Gamma^3_{23}\Gamma^2_{33}+0)\\ 
+        & = -\partial_\theta\qty(\sin\theta\cos\theta) + \cos^2\theta \\
+        & = \sin^2\theta
+\end{align*}
+其余均为$0$
+\begin{align*}
+    \mathcal{R} &= g^{\mu\nu}R_{\mu\nu}\\
+        & = g^{22}R_{22} + g^{33}R_{33}\\
+        & = \frac{1}{r^2} + \frac{1}{r^2\sin^2\theta}\sin^2\theta\\
+        & = \frac{2}{r^2} 
+\end{align*}

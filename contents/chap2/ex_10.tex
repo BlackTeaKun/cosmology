@@ -1,0 +1,17 @@
+\begin{align*}
+    \frac{H}{H_0} &= \sqrt{\frac{\rho}{\rho_{cr}}} = \sqrt{\frac{\rho_m + \rho_r}{\rho_{cr}}} \\
+        &=\sqrt{\frac{\Omega_m}{a^3} + \frac{\Omega_r}{a^4}}\\
+\intertext{因为$\Omega_r = 4.15\times 10 ^{-5}/h^2, h\sim0.72$, 且已经假设宇宙中只有物质和辐射, 所以$\Omega_m\sim1, \Omega_r = 8.005 \times 10^{-5}$}
+    H(a) &= H_0\sqrt{\frac{1}{a^3} + \frac{\Omega_r}{a^4}}\\
+    \dv{a}{t} &= aH_0\sqrt{\frac{1}{a^3} + \frac{\Omega_r}{a^4}}\\ 
+        &=H_0\sqrt{\frac{1}{a} + \frac{\Omega_r}{a^2}}\\
+    t(a)&= \frac{1}{H_0}\int_0^a \frac{a'\dd a'}{\sqrt{a' + \Omega_r}} =\frac{2}{H_0}\int_0^aa'\dd \sqrt{a' + \Omega_r} \\ 
+        &=\frac{2}{H_0}\qty[a\sqrt{a + \Omega_r} - \int_0^a\sqrt{a'+\Omega_r}\dd a']\\
+        &=\frac{2}{H_0}\qty[a\sqrt{a + \Omega_r} - \frac{2}{3}\qty(a+\Omega_r)^{\frac32} + \frac{2}{3}\Omega_r^{\frac{3}{2}}]\\
+    a(0.1MeV) &= 2.725K/0.1MeV = 2.35\times 10^{-9}\\
+    a(0.25eV) &= 2.725K/0.25eV = 9.39\times 10^{-4}&\text{书第四页(1.4)}\\
+    H_0 &= 1.023h\times10^{-10}\rm{year}^{-1} = 7.37 \times10^{-11}\rm{year}^{-1}\\
+\intertext{所以}
+    t(a_{0.1MeV}) &= 4.187 \times 10 ^ {-6}\rm{yr.} \sim 132 \rm{sec.} \\ 
+    t(a_{0.25eV}) &\sim 240000 \rm{yr.}
+\end{align*}
